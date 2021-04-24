@@ -64,18 +64,18 @@ string ElementRule::getGid(){
 }
 
 string ElementRule::getService(){
-	string devolver;
+	string devolucion;
         bool control=false;
 	multimap<string,string>::iterator it;
 	it= options.begin();
 	while(it.operator !=(options.end())){
 		if(it.operator ->()->first.compare("service")==0){
 			string aux (it.operator->()->second);
-			devolver.replace(0,aux.size(),aux);
+			devolucion.replace(0,aux.size(),aux);
 		}
 		it.operator ++();
 	}
-	return devolver;
+	return devolucion;
 }
 bool ElementRule::getComprobar(){
 	return comprobar;
